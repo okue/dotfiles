@@ -69,3 +69,4 @@ alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
 alias runghc="stack runghc --"
+source .git-completion.bash
