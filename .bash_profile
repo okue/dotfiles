@@ -1,5 +1,3 @@
-# cabal
-PATH="$PATH":"$HOME/.cabal/bin"
 # texbin
 PATH="$PATH":/Library/TeX/texbin
 # prolog
@@ -69,4 +67,9 @@ alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
 alias runghc="stack runghc --"
-source .git-completion.bash
+
+alias gitpushall="git add . && git commit -m 'update' && git push"
+
+source ~/.bash-completion-files/.haskyapi.bash
+source ~/.bash-completion-files/.truffle.bash
+source ~/.bash-completion-files/.git-completion.bash

@@ -93,6 +93,7 @@ au BufNewFile,BufRead *.scr   setf scrapeeee
 
 " build関連 ------------------------------------------------
 autocmd FileType haskell map <F4> :w \|!stack runghc %<CR>
+autocmd FileType haskell map <F5> :w \|!hlint %<CR>
 autocmd FileType ocaml  map <F4> :w \|!ocaml %<CR>
 autocmd FileType ocaml  map <F5> :!ocamlc -i %<CR>
 autocmd FileType ruby   map <F4> :w \|!ruby %<CR>
