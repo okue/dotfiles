@@ -4,12 +4,9 @@ PATH="$PATH":/Library/TeX/texbin
 PATH="$PATH":/Applications/SWI-Prolog.app/Contents/MacOS
 alias prolog='swipl'
 # node
-PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/purescript/vendor/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/phantomjs/bin/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/casperjs/bin/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/typescript/bin/
-PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/chrome-remote-interface/
-PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/lighthouse/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/bin
 eval "$(rbenv init -)"
 # lsの色
