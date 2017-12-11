@@ -90,12 +90,15 @@ au BufNewFile,BufRead *.purs  setf purescript
 au BufNewFile,BufRead *.ts    setf typescript
 au BufNewFile,BufRead *.sol   setf solidity
 au BufNewFile,BufRead *.scr   setf scrapeeee
+au BufNewFile,BufRead *.rs    setf rust
 
 " build関連 ------------------------------------------------
 autocmd FileType haskell map <F4> :w \|!stack runghc %<CR>
 autocmd FileType haskell map <F5> :w \|!hlint %<CR>
 autocmd FileType ocaml  map <F4> :w \|!ocaml %<CR>
 autocmd FileType ocaml  map <F5> :!ocamlc -i %<CR>
+autocmd FileType rust   map <F4> :w \|!rustc -o a.out %<CR>
+autocmd FileType rust   map <F5> :! ./a.out<CR>
 autocmd FileType ruby   map <F4> :w \|!ruby %<CR>
 autocmd FileType cpp    map <F4> :w \|!g++-7 --std=c++17 %<CR>
 autocmd FileType c      map <F4> :w \|!gcc-7 %<CR>
@@ -160,6 +163,7 @@ NeoBundle 'elmcast/elm-vim'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'leafgarland/typescript-vim'
 NeoBundle 'tomlion/vim-solidity'
+NeoBundle 'rust-lang/rust.vim'
 call neobundle#end()
 
 " haskell
