@@ -70,3 +70,4 @@ alias gitpushall="git add . && git commit -m 'update' && git push"
 source ~/.bash-completion-files/.haskyapi.bash
 source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.git-completion.bash
+source ~/.bash-completion-files/.sbt-scala.bash
