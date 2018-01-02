@@ -2,7 +2,7 @@
 
 _sbt()
 {
-  local first="compile run"
+  local first="compile run assembly"
   local cur=${COMP_WORDS[COMP_CWORD]}
   local prev=${COMP_WORDS[COMP_CWORD-1]} # previous argument
   case "$COMP_CWORD" in
