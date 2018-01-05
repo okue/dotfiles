@@ -83,6 +83,7 @@ set history=100
 
 au BufNewFile,BufRead *.elm   setf elm
 au BufNewFile,BufRead *.scala setf scala
+au BufNewFile,BufRead *.fr    setf frege
 au BufNewFile,BufRead *.z3    setf z3
 au BufNewFile,BufRead *.gd    setf GD
 au BufNewFile,BufRead *.agda  setf agda
@@ -113,6 +114,7 @@ autocmd FileType javascript map <F4> :w \| :!node %<CR>
 autocmd FileType z3     set syntax=lisp
 autocmd FileType GD     set syntax=haskell
 autocmd FileType agda   set syntax=haskell
+autocmd FileType frege  set syntax=haskell
 autocmd FileType purescript set syntax=haskell
 autocmd FileType scrapeeee  set syntax=typescript
 autocmd FileType agda   map <F4> :w \| :!agda %<CR>

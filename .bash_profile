@@ -60,6 +60,7 @@ PATH="$PATH":"$HOME/.local/bin":"$HOME/programming/Storage/go2aws/bin"
 PATH="$PATH":"$HOME/Sites/haskyapi/sbin"
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"
+alias eta="etlas exec eta --"
 alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
