@@ -107,6 +107,7 @@ autocmd FileType go     map <F4> :w \|!go run %<CR>
 autocmd FileType cpp    map <F5> :!./a.out <CR>
 autocmd FileType c      map <F5> :!./a.out <CR>
 autocmd FileType python map <F4> :w \|!python3.6 %<CR>
+autocmd FileType python map <F5> :w \|!mypy %<CR>
 autocmd FileType tex    map <F4> :w \| :!texc %<CR>
 autocmd FileType scala  map <F4> :w \| :!scala %<CR>
 autocmd FileType z3     map <F4> :w \| :!z3 %<CR>
