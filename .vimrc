@@ -111,6 +111,7 @@ autocmd FileType python map <F5> :w \|!mypy %<CR>
 autocmd FileType tex    map <F4> :w \| :!texc %<CR>
 autocmd FileType scala  map <F4> :w \| :!scala %<CR>
 autocmd FileType z3     map <F4> :w \| :!z3 %<CR>
+autocmd FileType erlang map <F4> :w \| :!escript %<CR>
 autocmd FileType javascript map <F4> :w \| :!node %<CR>
 autocmd FileType z3     set syntax=lisp
 autocmd FileType GD     set syntax=haskell
