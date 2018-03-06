@@ -41,7 +41,12 @@ function texc(){
 # function tabname(){
 #   echo -ne "\033]0;$1\007"
 # }
-PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
+function prompt_command(){
+  local TEMP_PWD=`basename $PWD`
+  echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
+}
+PROMPT_COMMAND='prompt_command'
+# PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 alias texc='texc'
 alias g++='g++ --std=c++11'
 eval "$(rbenv init -)"
