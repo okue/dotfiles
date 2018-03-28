@@ -112,6 +112,7 @@ autocmd FileType tex    map <F4> :w \| :!texc %<CR>
 autocmd FileType scala  map <F4> :w \| :!scala %<CR>
 autocmd FileType z3     map <F4> :w \| :!z3 %<CR>
 autocmd FileType erlang map <F4> :w \| :!escript %<CR>
+autocmd FileType erlang map <F5> :w \| :!dialyzer %<CR>
 autocmd FileType javascript map <F4> :w \| :!node %<CR>
 autocmd FileType z3     set syntax=lisp
 autocmd FileType GD     set syntax=haskell
@@ -160,7 +161,6 @@ NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'travitch/hasksyn'
 NeoBundle 'elmcast/elm-vim'
@@ -174,9 +174,6 @@ call neobundle#end()
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-" GhcModType
-autocmd FileType haskell map <Leader>t :GhcModType<CR>
-autocmd FileType haskell map <Leader>tt :GhcModTypeClear<CR>
 
 "------------------------------------------------------------
 " jedi-vim Setting

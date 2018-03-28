@@ -46,7 +46,6 @@ function prompt_command(){
   echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
 }
 PROMPT_COMMAND='prompt_command'
-# PROMPT_COMMAND='echo -ne "\033]0;${PWD/#$HOME/~}\007"'
 alias texc='texc'
 alias g++='g++ --std=c++11'
 eval "$(rbenv init -)"
