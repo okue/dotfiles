@@ -1,0 +1,55 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+hook_add = '''
+let g:vimfiler_as_default_explorer = 1
+noremap <C-X><C-T> :VimFiler -split -simple -winwidth=35 -no-quit<ENTER>
+autocmd FileType vimfiler nmap <buffer> <CR> <Plug>(vimfiler_expand_or_edit)
+'''
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+hook_add = '''
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
+nmap <Leader>, <Plug>(caw:zeropos:toggle)
+vmap <Leader>, <Plug>(caw:zeropos:toggle)
+'''
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+#[[plugins]]
+#repo = 'eagletmt/neco-ghc'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+'''

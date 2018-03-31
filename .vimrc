@@ -113,48 +113,26 @@ if &compatible
 endif
 
 if !isdirectory(s:dein_repo_dir)
-  execute '!git clone git@github.com:Shougo/dein.vim.git' s:dein_repo_dir
+  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
 endif
 
 execute 'set runtimepath^=' . s:dein_repo_dir
 
-call dein#begin(s:dein_dir)
-  call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-  call dein#add('Shougo/unite.vim')
-  call dein#add('Shougo/unite-outline')
-  call dein#add('Shougo/vimfiler')
-  " vim version 8 >=
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-  call dein#add('tyru/caw.vim')
-  call dein#add('itchyny/lightline.vim')
-  call dein#add('nathanaelkane/vim-indent-guides')
-  " call dein#add('eagletmt/neco-ghc')
-  call map(dein#check_clean(), "delete(v:val, 'rf')")
-call dein#end()
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  let g:rc_dir    = expand('~/.vim/dein/toml')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#end()
+  call dein#save_state()
+endif
+
+call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 if dein#check_install()
   call dein#install()
 endif
 
 filetype plugin indent on
-" ---------------------------------------------------------
-" deoplete.nvim
-let g:deoplete#enable_at_startup = 1
-" caw.vim
-nmap <Leader>c <Plug>(caw:hatpos:toggle)
-vmap <Leader>c <Plug>(caw:hatpos:toggle)
-nmap <Leader>, <Plug>(caw:zeropos:toggle)
-vmap <Leader>, <Plug>(caw:zeropos:toggle)
-" vimfiler
-let g:vimfiler_as_default_explorer = 1
-noremap <C-X><C-T> :VimFiler -split -simple -winwidth=35 -no-quit<ENTER>
-autocmd FileType vimfiler nmap <buffer> <CR> <Plug>(vimfiler_expand_or_edit)
-" deoplete
-"   tab, shift+tab で補完候補を移動
-inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"

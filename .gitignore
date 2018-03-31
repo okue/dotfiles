@@ -1,4 +1,7 @@
 .vim/bundle
 .vim/.vim
 .netrwhist
-.vim/dein
+.vim/dein/repos/github.com
+.vim/dein/.cache
+.vim/dein/cache_vim
+.vim/dein/state_vim.vim
