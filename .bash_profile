@@ -2,6 +2,8 @@
 # export LC_ALL=en_US.UTF-8
 # export LANG=en_US.UTF-8
 # export LANG=ja_JP.utf8
+alias vi='vim'
+alias grep='grep --color=auto'
 # texbin
 PATH="$PATH":/Library/TeX/texbin
 # prolog
@@ -24,7 +26,8 @@ alias wget="/usr/local/cellar/wget/1.16.3/bin/wget"
 # tab
 alias tab="expand -t4"
 alias la="ls -a"
-PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] $ "  
+# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] † "
+PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] λ "
 # editor
 alias subl="$HOME/applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # LaTex
@@ -38,6 +41,7 @@ function texc(){
     rm *.dvi;
     rm *.aux;
 }
+alias texc='texc'
 # function tabname(){
 #   echo -ne "\033]0;$1\007"
 # }
@@ -46,37 +50,26 @@ function prompt_command(){
   echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
 }
 PROMPT_COMMAND='prompt_command'
-alias texc='texc'
 alias g++='g++ --std=c++11'
 eval "$(rbenv init -)"
-# macvim --------------------------------------------
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias view='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/view "$@"'
-alias vi=vim
-# macvimのGUIはmvim
-alias gvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/mvim "$@"'
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-# ctags 
-alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
-
 export NODE_PATH="/usr/local/lib/node_modules/npm/bin:$PATH"
-
 alias chrome-canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 PATH="$PATH":"/usr/local/opt/llvm/bin"
 PATH="$PATH":"$HOME/.local/bin":"$HOME/programming/Storage/go2aws/bin"
 PATH="$PATH":"$HOME/Sites/haskyapi/sbin"
+
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"
 alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
 alias runghc="stack runghc --"
-
 alias gitpushall="git add . && git commit -m 'update' && git push"
 
 source ~/.bash-completion-files/.haskyapi.bash
 source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.git-completion.bash
 source ~/.bash-completion-files/.sbt-scala.bash
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
