@@ -59,10 +59,21 @@ let g:ale_echo_msg_error_str = 'Error'
 let g:ale_echo_msg_warning_str = 'Warning'
 let g:ale_echo_msg_format = '[%linter%: %severity%] %s'
 let g:ale_sign_column_always = 1
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" 一覧表示おおび窓のサイズ
+let g:ale_open_list = 1
+let g:ale_list_window_size = 3
+" close window automatically
+augroup CloseLoclistWindowGroup
+  autocmd!
+  autocmd QuitPre * if empty(&buftype) | lclose | endif
+augroup END
+" move by ctrl+j, k
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+highlight ALEErrorSign   ctermfg=9   " ctermbg=15
+highlight ALEWarningSign ctermfg=227 " ctermbg=15
+" highlight clear ALEErrorSign
+" highlight clear ALEWarningSign
 '''
 
 [[plugins]]
@@ -71,21 +82,24 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'maximbaz/lightline-ale'
 hook_add = '''
+let g:lightline = { 'colorscheme': 'one' }
+" 要) Ricty-Regular-Powerline.ttf
+let g:lightline.separator    = {'left': "⮀", 'right': "⮂"}
+let g:lightline.subseparator = {'left': "⮁", 'right': "⮃"}
 let g:lightline#ale#indicator_errors   = '✖'
 let g:lightline#ale#indicator_warnings = '⚠'
 let g:lightline#ale#indicator_ok       = 'o OK'
-let g:lightline = { 'colorscheme': 'powerline' }
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
       \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
+      \  'linter_errors':   'lightline#ale#errors',
+      \  'linter_ok':       'lightline#ale#ok',
       \ }
 let g:lightline.component_type = {
-      \     'linter_checking': 'left',
-      \     'linter_warnings': 'warning',
-      \     'linter_errors': 'error',
-      \     'linter_ok': 'left',
+      \  'linter_checking': 'one',
+      \  'linter_warnings': 'warning',
+      \  'linter_errors':   'error',
+      \  'linter_ok':       'left',
       \ }
 let g:lightline.active = {
       \   'right': [ [ 'lineinfo' ],
@@ -93,10 +107,8 @@ let g:lightline.active = {
       \              [ 'fileformat', 'fileencoding', 'filetype' ],
       \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ] }
 let g:lightline.tabline = {
-      \ 'left': [ [ 'tabs' ] ],
+      \ 'left':  [ [ 'tabs' ] ],
       \ 'right': [ [ 'close' ] ] }
-" let g:lightline.separator      = {'left': "", 'right': ""}
-" let g:lightline.subseparator = {'left': "", 'right': ""}
 '''
 
 [[plugins]]
