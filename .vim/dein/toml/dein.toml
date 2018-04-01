@@ -2,6 +2,12 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+'''
+
+[[plugins]]
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
@@ -26,12 +32,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 '''
-
-# [[plugins]]
-# repo = 'ryanoasis/vim-devicons'
-# hook_add = '''
-# let g:WebDevIconsUnicodeDecorateFolderNodes = 0
-# '''
 
 [[plugins]]
 repo = 'tyru/caw.vim'
@@ -77,12 +77,13 @@ highlight ALEWarningSign ctermfg=227 " ctermbg=15
 '''
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
+repo = 'okue/lightline.vim'
 
 [[plugins]]
 repo = 'maximbaz/lightline-ale'
 hook_add = '''
-let g:lightline = { 'colorscheme': 'one' }
+" lightlineを読み込んでから実行してほしいので, lightlineの設定もここに書いてる
+let g:lightline = { 'colorscheme': 'molokai' }
 " 要) Ricty-Regular-Powerline.ttf
 let g:lightline.separator    = {'left': "⮀", 'right': "⮂"}
 let g:lightline.subseparator = {'left': "⮁", 'right': "⮃"}
@@ -106,9 +107,6 @@ let g:lightline.active = {
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ],
       \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ] }
-let g:lightline.tabline = {
-      \ 'left':  [ [ 'tabs' ] ],
-      \ 'right': [ [ 'close' ] ] }
 '''
 
 [[plugins]]
