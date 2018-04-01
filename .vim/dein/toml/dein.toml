@@ -1,23 +1,53 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
-repo = 'itchyny/lightline.vim'
+# [[plugins]]
+# repo = 'Shougo/vimproc.vim'
+# build = 'make'
+
+# [[plugins]]
+# repo = 'Shougo/unite.vim'
 
 [[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
+repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
+repo = 'jistr/vim-nerdtree-tabs'
 hook_add = '''
-let g:vimfiler_as_default_explorer = 1
-noremap <C-X><C-T> :VimFiler -split -simple -winwidth=35 -no-quit<ENTER>
-autocmd FileType vimfiler nmap <buffer> <CR> <Plug>(vimfiler_expand_or_edit)
+map \e <plug>NERDTreeTabsToggle<CR>
+let g:nerdtree_tabs_autoclose = 1
 '''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+hook_add = '''
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+" フォルダアイコンの表示をON
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+'''
+
+# [[plugins]]
+# repo = 'Shougo/vimfiler.vim'
+# hook_add = '''
+# let g:vimfiler_as_default_explorer = 1
+# noremap <C-X><C-T> :VimFiler -split -simple -winwidth=35 -no-quit<ENTER>
+# autocmd FileType vimfiler nmap <buffer> <CR> <Plug>(vimfiler_expand_or_edit)
+# '''
 
 [[plugins]]
 repo = 'tyru/caw.vim'
@@ -29,9 +59,6 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 '''
 
 [[plugins]]
-repo = 'w0rp/ale'
-
-[[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 
 #[[plugins]]
@@ -39,6 +66,57 @@ repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'w0rp/ale'
+hook_add = '''
+" 保存時のみ実行
+" let g:ale_lint_on_text_changed = 0
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+let g:ale_echo_msg_error_str = 'Error'
+let g:ale_echo_msg_warning_str = 'Warning'
+let g:ale_echo_msg_format = '[%linter%: %severity%] %s'
+let g:ale_sign_column_always = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'maximbaz/lightline-ale'
+hook_add = '''
+let g:lightline#ale#indicator_errors   = '✖'
+let g:lightline#ale#indicator_warnings = '⚠'
+let g:lightline#ale#indicator_ok       = 'o OK'
+let g:lightline = { 'colorscheme': 'powerline' }
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ }
+let g:lightline.active = {
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype' ],
+      \              [ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ] ] }
+let g:lightline.tabline = {
+      \ 'left': [ [ 'tabs' ] ],
+      \ 'right': [ [ 'close' ] ] }
+" let g:lightline.separator    = {'left': '', 'right': ''},
+" let g:lightline.subseparator = {'left': '', 'right': ''},
+'''
 
 [[plugins]]
 repo = 'roxma/nvim-yarp'
@@ -52,4 +130,10 @@ hook_add = '''
 let g:deoplete#enable_at_startup = 1
 inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+'''
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+let g:cheatsheet#cheat_file = '~/.vim/dein/cheatsheet.md'
 '''

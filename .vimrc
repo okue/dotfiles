@@ -5,6 +5,9 @@ set backspace=indent,eol,start
 set ts=2 sw=2 noet
 " 全角文字
 set ambiwidth=double
+" set guifont=Cica:h16
+" set printfont=Cica:h12
+set encoding=UTF-8
 set history=100
 set t_Co=256
 set number         " 行番号を表示する
