@@ -1,0 +1,3 @@
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+on_ft = ['haskell']
