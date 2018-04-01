@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'ryanoasis/vim-devicons'
 hook_add = '''
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:webdevicons_enable_nerdtree = 1
+"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 '''
 
 [[plugins]]
@@ -15,6 +18,7 @@ repo = 'jistr/vim-nerdtree-tabs'
 hook_add = '''
 map \e <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_autoclose = 1
+let g:NERDTreeShowHidden=1
 '''
 
 [[plugins]]
@@ -51,8 +55,10 @@ repo = 'cespare/vim-toml'
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = '''
-" 保存時のみ実行
-" let g:ale_lint_on_text_changed = 0
+" linterのタイミング
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_insert_leave = 1
+
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 let g:ale_echo_msg_error_str = 'Error'
@@ -74,19 +80,27 @@ highlight ALEErrorSign   ctermfg=9   " ctermbg=15
 highlight ALEWarningSign ctermfg=227 " ctermbg=15
 " highlight clear ALEErrorSign
 " highlight clear ALEWarningSign
+let g:ale_linters = {
+  \ 'haskell': ['hlint']
+  \ }
 '''
 
 [[plugins]]
-repo = 'okue/lightline.vim'
+repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'maximbaz/lightline-ale'
 hook_add = '''
 " lightlineを読み込んでから実行してほしいので, lightlineの設定もここに書いてる
+" 要) Ricty-Regular-Powerline.ttf や Cica.ttf
 let g:lightline = { 'colorscheme': 'molokai' }
-" 要) Ricty-Regular-Powerline.ttf
-let g:lightline.separator    = {'left': "⮀", 'right': "⮂"}
-let g:lightline.subseparator = {'left': "⮁", 'right': "⮃"}
+
+" separators for status line, tabline
+" let g:lightline.separator    = {'left': "⮀", 'right': "⮂"}
+" let g:lightline.subseparator = {'left': "⮁", 'right': "⮃"}
+let g:lightline.separator    = {'left': "", 'right': ""}
+let g:lightline.subseparator = {'left': "", 'right': ""}
+
 let g:lightline#ale#indicator_errors   = '✖'
 let g:lightline#ale#indicator_warnings = '⚠'
 let g:lightline#ale#indicator_ok       = 'o OK'
