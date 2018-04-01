@@ -5,9 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'ryanoasis/vim-devicons'
 hook_add = '''
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:webdevicons_enable_nerdtree = 1
-"let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-"let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 '''
 
 [[plugins]]

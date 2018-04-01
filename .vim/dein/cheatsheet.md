@@ -1,12 +1,28 @@
 # Cheat Sheet
 
-## Vim
-- 'vim -p': open with tab
-- 'vim -o': open with vsplit
+[sheet](https://vim.rtorr.com/lang/ja/)
 
-- '\e': open and close tree
-- '\c': comment out
-- 'ctrl j': next warning, error
-- 'ctrl k': prev warning, error
-- 'ctrl w': move window
-- 'gt': move to next tab
+
+## Vim
+- 'vim -p' : open with tab
+- 'vim -o' : open with vsplit
+
+### Tree
+- '\e'     : open and close tree
+- 't, T'   : open tab
+
+### Comment
+- '\c'     : comment out
+
+### Tab
+- '\t'     : move to next tab
+- 'gt'     : move to next tab
+- 'gT'     : move to prev tab
+
+### Window
+- '\w + w' : move window
+- 'ctrl w' : move window
+
+### Ale
+- 'ctrl j' : next warning, error
+- 'ctrl k' : prev warning, error
