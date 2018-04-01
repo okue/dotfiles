@@ -59,9 +59,9 @@ hook_add = '''
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_insert_leave = 1
 
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚠'
-let g:ale_echo_msg_error_str = 'Error'
+let g:ale_sign_error   = "\ue20d"
+let g:ale_sign_warning = "\uf41b"
+let g:ale_echo_msg_error_str   = 'Error'
 let g:ale_echo_msg_warning_str = 'Warning'
 let g:ale_echo_msg_format = '[%linter%: %severity%] %s'
 let g:ale_sign_column_always = 1
@@ -92,18 +92,18 @@ repo = 'itchyny/lightline.vim'
 repo = 'maximbaz/lightline-ale'
 hook_add = '''
 " lightlineを読み込んでから実行してほしいので, lightlineの設定もここに書いてる
-" 要) Ricty-Regular-Powerline.ttf や Cica.ttf
 let g:lightline = { 'colorscheme': 'molokai' }
 
+" 要) Cica.ttf https://miiton.github.io/Cica/ 
 " separators for status line, tabline
-" let g:lightline.separator    = {'left': "⮀", 'right': "⮂"}
-" let g:lightline.subseparator = {'left': "⮁", 'right': "⮃"}
-let g:lightline.separator    = {'left': "", 'right': ""}
-let g:lightline.subseparator = {'left': "", 'right': ""}
+" let g:lightline.separator    = {'left': "\ue0b0", 'right': "\ue0b2"}
+" let g:lightline.subseparator = {'left': "\ue0b1", 'right': "\ue0b3"}
+let g:lightline.separator    = {'left': "\ue0c0", 'right': "\ue0c2"}
+let g:lightline.subseparator = {'left': "\ue0c1", 'right': "\ue0c3"}
 
-let g:lightline#ale#indicator_errors   = '✖'
-let g:lightline#ale#indicator_warnings = '⚠'
-let g:lightline#ale#indicator_ok       = 'o OK'
+let g:lightline#ale#indicator_errors   = "\ue20d"
+let g:lightline#ale#indicator_warnings = "\uf41b"
+let g:lightline#ale#indicator_ok       = "ok \uf42e"
 let g:lightline.component_expand = {
       \  'linter_checking': 'lightline#ale#checking',
       \  'linter_warnings': 'lightline#ale#warnings',
