@@ -78,7 +78,8 @@ highlight ALEWarningSign ctermfg=227 " ctermbg=15
 " highlight clear ALEErrorSign
 " highlight clear ALEWarningSign
 let g:ale_linters = {
-  \ 'haskell': ['hlint']
+  \ 'haskell': ['hlint'],
+  \ 'c'      : ['gcc']
   \ }
 '''
 
