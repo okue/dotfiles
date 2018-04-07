@@ -71,6 +71,7 @@ source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.git-completion.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
+source ~/.bash-completion-files/.make.bash
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
