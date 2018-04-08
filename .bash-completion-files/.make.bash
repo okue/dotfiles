@@ -3,7 +3,7 @@ _make()
 {
   local tmp=`ls`
   if [ -f ./Makefile ]; then
-    tmp=`cat Makefile | grep --color=auto -E '^[^#].+:'`
+    tmp=`cat Makefile | grep --color=auto -E '^[^#\s=]+:'`
   fi
   local first=${tmp//:/}
   local cur=${COMP_WORDS[COMP_CWORD]}
