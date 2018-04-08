@@ -21,8 +21,6 @@ alias ll='ls -hl'
 # terminal.app用？
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias f="open ."
-# wget
-alias wget="/usr/local/cellar/wget/1.16.3/bin/wget"
 # tab
 alias tab="expand -t4"
 alias la="ls -a"

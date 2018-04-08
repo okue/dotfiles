@@ -1,3 +1,11 @@
 [[plugins]]
 repo = 'eagletmt/neco-ghc'
 on_ft = ['haskell']
+
+[[plugins]]
+repo = 'okue/hasksyn'
+on_ft = ['haskell']
+
+[[plugins]]
+repo = 'okue/vim-haskellConcealPlus'
+on_ft = ['haskell']
