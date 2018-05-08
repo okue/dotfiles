@@ -24,8 +24,8 @@ alias f="open ."
 # tab
 alias tab="expand -t4"
 alias la="ls -a"
-# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] † "
-PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] λ "
+PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] † "
+# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] λ "
 # editor
 alias subl="$HOME/applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # LaTex

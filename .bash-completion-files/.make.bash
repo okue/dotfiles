@@ -3,9 +3,10 @@ _make()
 {
   local tmp=`ls`
   if [ -f ./Makefile ]; then
-    tmp=`cat Makefile | grep --color=auto -E '^[^#\s=]+:'`
+    tmp=`cat Makefile | grep --color=auto -E '^[^\$#= ]+:'`
   fi
-  local first=${tmp//:/}
+  local tmp2=${tmp//:/}
+  local first=${tmp2//$/}
   local cur=${COMP_WORDS[COMP_CWORD]}
   local prev=${COMP_WORDS[COMP_CWORD-1]} # previous argument
   case "$COMP_CWORD" in

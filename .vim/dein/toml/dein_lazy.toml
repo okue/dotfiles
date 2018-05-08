@@ -9,3 +9,7 @@ on_ft = ['haskell']
 [[plugins]]
 repo = 'okue/vim-haskellConcealPlus'
 on_ft = ['haskell']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
