@@ -53,7 +53,7 @@ export NODE_PATH="/usr/local/lib/node_modules/npm/bin:$PATH"
 alias chrome-canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 PATH="$PATH":"/usr/local/opt/llvm/bin"
 PATH="$PATH":"$HOME/.local/bin":"$HOME/programming/Storage/go2aws/bin"
-PATH="$PATH":"$HOME/Sites/haskyapi/sbin"
+PATH="$PATH":"$HOME/work/Concuerror/bin"
 
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"

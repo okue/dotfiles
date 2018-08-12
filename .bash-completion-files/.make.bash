@@ -3,7 +3,7 @@ _make()
 {
   local tmp=`ls`
   if [ -f ./Makefile ]; then
-    tmp=`cat Makefile | grep --color=auto -E '^[^\$#= ]+:'`
+    tmp=`cat Makefile | grep -E '^[^\$#= ]+:' | grep -v '^\t'`
   fi
   local tmp2=${tmp//:/}
   local first=${tmp2//$/}

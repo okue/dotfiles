@@ -5,3 +5,5 @@
 .vim/dein/.cache
 .vim/dein/cache_vim
 .vim/dein/state_vim.vim
+.vim/dein/cache_view
+.vim/dein/state_view.vim
