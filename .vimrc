@@ -58,6 +58,7 @@ au BufNewFile,BufRead *.purs  setf purescript
 au BufNewFile,BufRead *.ts    setf typescript
 au BufNewFile,BufRead *.sol   setf solidity
 au BufNewFile,BufRead *.rs    setf rust
+au BufNewFile,BufRead *.tex   setf tex
 
 " build関連 ------------------------------------------------
 autocmd FileType haskell    map <F4> :w \|!stack runghc %<CR>
