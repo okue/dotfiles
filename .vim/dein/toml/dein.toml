@@ -135,9 +135,3 @@ let g:deoplete#enable_at_startup = 1
 inoremap <expr><TAB>    pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
 '''
-
-[[plugins]]
-repo = 'reireias/vim-cheatsheet'
-hook_add = '''
-let g:cheatsheet#cheat_file = '~/.vim/dein/cheatsheet.md'
-'''

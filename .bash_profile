@@ -10,6 +10,7 @@ PATH="$PATH":/Library/TeX/texbin
 PATH="$PATH":/Applications/SWI-Prolog.app/Contents/MacOS
 alias prolog='swipl'
 # node
+export NODE_PATH="/usr/local/lib/node_modules/npm/bin:$PATH"
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/phantomjs/bin/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/casperjs/bin/
 PATH="$PATH":/usr/local/Cellar/node/7.7.3/lib/node_modules/typescript/bin/
@@ -49,11 +50,9 @@ function prompt_command(){
 PROMPT_COMMAND='prompt_command'
 alias g++='g++ --std=c++11'
 eval "$(rbenv init -)"
-export NODE_PATH="/usr/local/lib/node_modules/npm/bin:$PATH"
 alias chrome-canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 PATH="$PATH":"/usr/local/opt/llvm/bin"
 PATH="$PATH":"$HOME/.local/bin":"$HOME/programming/Storage/go2aws/bin"
-PATH="$PATH":"$HOME/work/Concuerror/bin"
 
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"
@@ -62,13 +61,19 @@ alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
 alias runghc="stack runghc --"
 alias gitpushall="git add . && git commit -m 'update' && git push"
+alias cd_icloud="cd ~/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 source ~/.bash-completion-files/.haskyapi.bash
 source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.git-completion.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
 source ~/.bash-completion-files/.make.bash
+
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+PATH="$HOME/.cargo/bin":"$PATH"
+PATH="$PATH":"$HOME/work/LCM/pgsolver/bin"

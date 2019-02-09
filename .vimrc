@@ -92,8 +92,8 @@ autocmd FileType purescript set syntax=haskell
 
 " key bindings ---------------------------------------------
 nnoremap ; :
-nmap \w <C-w>
-nmap \t gt
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
 
 " dein.vim setting -----------------------------------------
 let s:dein_dir = expand('~/.vim/dein')
