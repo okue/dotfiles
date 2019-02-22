@@ -5,11 +5,11 @@
 alias vi='vim'
 alias grep='grep --color=auto'
 # texbin
-PATH="$PATH":/Library/TeX/texbin
+PATH=$PATH:/Library/TeX/texbin
 # prolog
 alias prolog='swipl'
 # node
-export NODE_PATH="/usr/local/lib/node_modules/npm/bin:$PATH"
+export NODE_PATH=/usr/local/lib/node_modules/npm/bin
 eval "$(rbenv init -)"
 # lsの色
 alias ls='ls -G'
@@ -48,7 +48,17 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-PATH="$PATH":"/usr/local/opt/llvm/bin"
-PATH="$PATH":"$HOME/.local/bin":"$HOME/programming/Storage/go2aws/bin"
-PATH="$HOME/.cargo/bin":"$PATH"
-PATH="$PATH":"$HOME/work/LCM/pgsolver/bin":"$HOME/work/McErlang/scripts":"$HOME/work/Concuerror/bin"
+paths=(
+/usr/local/opt/llvm/bin
+/usr/local/Cellar/node/11.3.0_1/bin
+$HOME/programming/Storage/go2aws/bin
+$HOME/.local/bin
+$HOME/.cargo/bin
+$HOME/work/LCM/pgsolver/bin
+$HOME/work/McErlang/scripts
+$HOME/work/Concuerror/bin
+)
+for X in ${paths[@]}; do
+  PATH=$PATH:$X
+done
+export PATH=$PATH
