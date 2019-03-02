@@ -55,8 +55,6 @@ $HOME/programming/Storage/go2aws/bin
 $HOME/.local/bin
 $HOME/.cargo/bin
 $HOME/work/LCM/pgsolver/bin
-$HOME/work/McErlang/scripts
-$HOME/work/Concuerror/bin
 )
 for X in ${paths[@]}; do
   PATH=$PATH:$X
