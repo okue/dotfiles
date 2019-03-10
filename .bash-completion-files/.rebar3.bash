@@ -2,7 +2,7 @@
 
 _rebar3()
 {
-  local first="compile release tree escriptize --help"
+  local first="compile release shell clean tree escriptize eunit dialyzer --help"
   local cur=${COMP_WORDS[COMP_CWORD]}
   local prev=${COMP_WORDS[COMP_CWORD-1]} # previous argument
   case "$COMP_CWORD" in
