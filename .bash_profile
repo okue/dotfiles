@@ -3,6 +3,7 @@
 # export LANG=en_US.UTF-8
 # export LANG=ja_JP.utf8
 alias vi='vim'
+alias l='ls'
 alias grep='grep --color=auto'
 # texbin
 PATH=$PATH:/Library/TeX/texbin
@@ -19,13 +20,6 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 alias f="open ."
 # tab
 alias la="ls -a"
-PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] 卍 "
-
-function prompt_command(){
-  local TEMP_PWD=`basename $PWD`
-  echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
-}
-PROMPT_COMMAND='prompt_command'
 alias g++='g++ --std=c++11'
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"
@@ -44,10 +38,6 @@ source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
 source ~/.bash-completion-files/.make.bash
 
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
 paths=(
 /usr/local/opt/llvm/bin
 /usr/local/Cellar/node/11.3.0_1/bin
@@ -60,3 +50,21 @@ for X in ${paths[@]}; do
   PATH=$PATH:$X
 done
 export PATH=$PATH
+[ -f ~/.bashrc ] && . ~/.bashrc
+function prompt_command(){
+  local TEMP_PWD=`basename $PWD`
+  echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
+}
+PROMPT_COMMAND='prompt_command'
+##########################################################################
+# [ -f ~/.bash_powerline ] && . ~/.bash_powerline
+# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] 卍 "
+##########################################################################
+# pip3 install powerline-shell
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+##########################################################################
