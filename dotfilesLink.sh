@@ -1,5 +1,8 @@
 #! /bin/bash
 
+# pip3 install powerline-shell
+# powerline-shell --generate-config > ~/.powerline-shell.json
+
 ln -s ~/dotfiles/.vim                   ~
 ln -s ~/dotfiles/.vimrc                 ~
 ln -s ~/dotfiles/.inputrc               ~
