@@ -1,0 +1,21 @@
+{
+    "segments":
+        [ "virtual_env"
+        , "username"
+        , "ssh"
+        , "cwd"
+        , "git"
+        , "hg"
+        , "jobs"
+        , "root"
+        , "time"
+        , "read_only"
+        ],
+    "theme":
+        "solarized_dark",
+    "vcs":
+        { "show_symbol": true },
+    "cwd":
+        { "mode": "plain"
+        }
+}
