@@ -11,6 +11,8 @@
         , "time"
         , "read_only"
         ],
+    "mode":
+        "flame",
     "theme":
         "solarized_dark",
     "vcs":
