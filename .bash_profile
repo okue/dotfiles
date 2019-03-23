@@ -7,17 +7,17 @@ alias ll='ls -hl'
 alias la="ls -a"
 alias grep='grep --color=auto'
 alias prolog='swipl'
-eval "$(rbenv init -)"
 alias f="open ."
 alias g++='g++ --std=c++11'
+alias gitpushall="git add . && git commit -m 'update' && git push"
+alias cd_icloud="cd ~/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
+eval "$(rbenv init -)"
 # stack, haskell
 eval "$(stack --bash-completion-script stack)"
 alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
 alias runghc="stack runghc --"
-alias gitpushall="git add . && git commit -m 'update' && git push"
-alias cd_icloud="cd ~/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
 # bash_completion
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 source ~/.bash-completion-files/.haskyapi.bash
@@ -51,11 +51,16 @@ function prompt_command(){
   echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
 }
 PROMPT_COMMAND='prompt_command'
-# [ -f ~/.bash_powerline ] && . ~/.bash_powerline
-PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] 卍 "
-# function _update_ps1() {
-#     PS1=$(powerline-shell $?)
-# }
-# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-# fi
+# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] 卍 "
+# Look at https://github.com/justjanne/powerline-go#customization
+function _update_ps1() {
+    PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
+                                    -mode flame\
+                                    -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root,vgo"\
+                                    -modules-right "time"\
+                                    -theme "solarized-dark16"\
+                                    -error $?)"
+}
+if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

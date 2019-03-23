@@ -1,8 +1,6 @@
 #! /bin/bash
 
-# git clone https://github.com/okue/powerline-shell
-# cd powerline-shell && python3 setup.py install
-# powerline-shell --generate-config > ~/.powerline-shell.json
+# go get -u https://github.com/justjanne/powerline-go
 
 ln -s ~/dotfiles/.vim                   ~
 ln -s ~/dotfiles/.vimrc                 ~
