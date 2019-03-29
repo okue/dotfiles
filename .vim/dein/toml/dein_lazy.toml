@@ -1,11 +1,11 @@
 [[plugins]]
-repo = 'eagletmt/neco-ghc'
-on_ft = ['haskell']
-
-# [[plugins]]
-# repo = ''
-# on_ft = ['haskell']
-
-[[plugins]]
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
+
+
+[[plugins]]
+repo = 'elmcast/elm-vim'
+on_ft = ['elm']
+hook_add = '''
+let g:elm_setup_keybindings = 0
+'''
