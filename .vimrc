@@ -53,8 +53,6 @@ au BufNewFile,BufRead *.scala setf scala
 au BufNewFile,BufRead *.fr    setf frege
 au BufNewFile,BufRead *.z3    setf z3
 au BufNewFile,BufRead *.gd    setf GD
-au BufNewFile,BufRead *.agda  setf agda
-au BufNewFile,BufRead *.purs  setf purescript
 au BufNewFile,BufRead *.ts    setf typescript
 au BufNewFile,BufRead *.sol   setf solidity
 au BufNewFile,BufRead *.rs    setf rust
@@ -74,7 +72,6 @@ autocmd FileType cpp        map <F5> :!./a.out <CR>
 autocmd FileType c          map <F4> :w \|!gcc-7 %<CR>
 autocmd FileType c          map <F5> :!./a.out <CR>
 autocmd FileType python     map <F4> :w \|!python3.6 %<CR>
-autocmd FileType python     map <F5> :w \|!mypy %<CR>
 autocmd FileType tex        map <F4> :w \| :!texc %<CR>
 autocmd FileType scala      map <F4> :w \| :!scala %<CR>
 autocmd FileType erlang     map <F4> :w \| :!escript %<CR>
@@ -83,12 +80,9 @@ autocmd FileType z3         map <F4> :w \| :!z3 %<CR>
 autocmd FileType z3         set syntax=lisp
 autocmd FileType GD         set syntax=haskell
 autocmd FileType frege      set syntax=haskell
-autocmd FileType agda       set syntax=haskell
-autocmd FileType agda       map <F4> :w \| :!agda %<CR>
 autocmd FileType sh         map <F4> :w \| :!./%<CR>
 autocmd FileType typescript map <F4> :w \| :!tsc %<CR>
 autocmd FileType javascript map <F4> :w \| :!node %<CR>
-autocmd FileType purescript set syntax=haskell
 
 " key bindings ---------------------------------------------
 nnoremap ; :

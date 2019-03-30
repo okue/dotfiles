@@ -2,7 +2,6 @@
 repo = 'leafgarland/typescript-vim'
 on_ft = ['typescript']
 
-
 [[plugins]]
 repo = 'elmcast/elm-vim'
 on_ft = ['elm']
