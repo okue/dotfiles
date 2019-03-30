@@ -8,3 +8,19 @@ on_ft = ['elm']
 hook_add = '''
 let g:elm_setup_keybindings = 0
 '''
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+on_i = 1
+hook_add = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'haskell': [ 'hie' ],
+    \ 'c'      : [ 'clangd' ],
+    \ 'cpp'    : [ 'clangd' ],
+    \ 'python' : [ 'pyls' ],
+    \ }
+let g:LanguageClient_diagnosticsEnable = 0
+'''
