@@ -22,10 +22,8 @@ alias runghc="stack runghc --"
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 source ~/.bash-completion-files/.haskyapi.bash
 source ~/.bash-completion-files/.truffle.bash
-source ~/.bash-completion-files/.git-completion.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
-source ~/.bash-completion-files/.make.bash
 # PATH
 export NODE_PATH=/usr/local/lib/node_modules/npm/bin
 export GOPATH=$HOME/.go

@@ -82,18 +82,17 @@ highlight ALEErrorSign   ctermfg=9   " ctermbg=15
 highlight ALEWarningSign ctermfg=227 " ctermbg=15
 
 let g:ale_fix_on_save = 1
-" let g:ale_completion_enabled = 1
 
 nnoremap <Leader>g :ALEGoToDefinitionInTab<CR>
 nnoremap <Leader>r :ALEFindReferences<CR>
 nnoremap <Leader>h :ALEHover<CR>
 
 let g:ale_linters = {
-  \ 'haskell': [ 'hlint', 'hie' ],
-  \ 'c'      : [ 'gcc' ],
-  \ 'cpp'    : [ 'gcc' ],
-  \ 'python' : [ 'pyls' ],
-  \ }
+    \ 'haskell': [ 'hlint' ],
+    \ 'c'      : [ 'gcc' ],
+    \ 'cpp'    : [ 'gcc' ],
+    \ 'python' : [ 'pyls' ],
+    \ }
 '''
 
 [[plugins]]

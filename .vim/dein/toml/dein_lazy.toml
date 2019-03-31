@@ -16,11 +16,15 @@ build = 'bash install.sh'
 on_i = 1
 hook_add = '''
 set hidden
+let g:LanguageClient_diagnosticsEnable = 0
+let g:LanguageClient_rootMakers = {
+    \ 'haskell': ['*.cabal', 'stack.yaml'],
+    \ } 
 let g:LanguageClient_serverCommands = {
-    \ 'haskell': [ 'hie' ],
+    \ 'haskell': [ 'hie-wrapper' ],
     \ 'c'      : [ 'clangd' ],
     \ 'cpp'    : [ 'clangd' ],
     \ 'python' : [ 'pyls' ],
+    \ 'ruby'   : [ 'solargraph', 'stdio' ],
     \ }
-let g:LanguageClient_diagnosticsEnable = 0
 '''
