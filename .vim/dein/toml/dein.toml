@@ -88,9 +88,8 @@ nnoremap <Leader>r :ALEFindReferences<CR>
 nnoremap <Leader>h :ALEHover<CR>
 
 let g:ale_linters = {
-    \ 'haskell': [ 'hlint' ],
-    \ 'c'      : [ 'gcc' ],
-    \ 'cpp'    : [ 'gcc' ],
+    \ 'c'      : [ 'clangd' ],
+    \ 'cpp'    : [ 'clangd' ],
     \ 'python' : [ 'pyls' ],
     \ }
 '''
