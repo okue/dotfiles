@@ -54,6 +54,7 @@ au BufNewFile,BufRead *.fr    setf frege
 au BufNewFile,BufRead *.z3    setf z3
 au BufNewFile,BufRead *.gd    setf GD
 au BufNewFile,BufRead *.ts    setf typescript
+au BufNewFile,BufRead *.kt    setf kotlin
 au BufNewFile,BufRead *.sol   setf solidity
 au BufNewFile,BufRead *.rs    setf rust
 au BufNewFile,BufRead *.tex   setf tex
