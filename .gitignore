@@ -10,4 +10,4 @@
 .vim/dein/cache_view
 .vim/dein/state_view.vim
 
-powerline-shell
+KotlinLanguageServer

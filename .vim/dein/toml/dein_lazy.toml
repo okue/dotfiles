@@ -26,5 +26,6 @@ let g:LanguageClient_serverCommands = {
     \ 'cpp'    : [ 'clangd' ],
     \ 'python' : [ 'pyls' ],
     \ 'ruby'   : [ 'solargraph', 'stdio' ],
+    \ 'kotlin' : [ '~/dotfiles/KotlinLanguageServer/server/build/install/server/bin/server' ],
     \ }
 '''
