@@ -11,9 +11,9 @@ alias f="open ."
 alias g++='g++ --std=c++11'
 alias gitpushall="git add . && git commit -m 'update' && git push"
 alias cd_icloud="cd ~/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 # stack, haskell
-eval "$(stack --bash-completion-script stack)"
+# eval "$(stack --bash-completion-script stack)"
 alias ghc="stack ghc --"
 alias ghci="stack ghci --"
 alias runhaskell="stack runghc --"
