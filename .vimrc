@@ -1,16 +1,11 @@
 syntax on
 colorscheme molokai
-set nocompatible
-set backspace=indent,eol,start
-set ts=2 sw=2 noet
+set backspace=indent,eol,start " backspaceが効かない場合のため
 set ambiwidth=double " 全角文字
-" set guifont=Cica:h16
-" set printfont=Cica:h12
 set t_Co=256
 set encoding=UTF-8
 set synmaxcol=200
 set number           " 行番号を表示する
-" カーソルの行, 列のハイライトは, かなりもっさりする
 " set cursorline       " カーソル行の背景色を変える
 " set cursorcolumn     " カーソル位置のカラムの背景色を変える
 set laststatus=2     " ステータス行を常に表示
@@ -42,7 +37,7 @@ set history=100      " コマンドラインの履歴を100件保存する
 set mouse=a          " マウスの入力を受け付ける
 set visualbell t_vb= " ビープ音すべてを無効にする
 set noerrorbells     " エラーメッセージの表示時にビープを鳴らさない
-:set noundofile      " .unファイルを作らない
+set noundofile       " .unファイルを作らない
 set listchars=tab:▸\ ,eol:↲,extends:❯,precedes:❮ " 不可視文字の表示記号指定
 set clipboard=unnamed,unnamedplus,autoselect     " OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
 set wildmenu wildmode=list:longest,full          " コマンドラインモードでTABキーによるファイル名補完を有効にする
