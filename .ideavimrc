@@ -11,3 +11,33 @@ nnoremap ; :
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap s <C-w>
+
+" 参考
+" https://ikenox.info/blog/ideavim-introduction/
+" https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950
+
+nnoremap <Leader>c :action CommentByLineComment<CR>
+vnoremap <Leader>c :action CommentByLineComment<CR>
+
+" 前/次のメソッド定義へジャンプ
+nnoremap [m :<C-u>action MethodUp<CR>
+nnoremap ]m :<C-u>action MethodDown<CR>
+
+" 前/次の変更箇所へジャンプ
+nnoremap [c :<C-u>action VcsShowPrevChangeMarker<CR>
+nnoremap ]c :<C-u>action VcsShowNextChangeMarker<CR>
+
+" 前/次のエラー箇所へジャンプ
+nnoremap [e :<C-u>action GotoPreviousError<CR>
+nnoremap ]e :<C-u>action GotoNextError<CR>
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gi :action GotoImplementation<CR>
+
+nnoremap U :action FindUsages<CR>
+nnoremap R :action RenameElement<CR>
+nnoremap S :action SearchEverywhere<CR>
+
+nnoremap == :action ReformatCode<CR>
+vnoremap == :action ReformatCode<CR>
