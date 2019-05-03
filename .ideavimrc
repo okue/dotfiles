@@ -13,8 +13,8 @@ nnoremap <S-Tab> gT
 nnoremap s <C-w>
 
 " 参考
-" https://ikenox.info/blog/ideavim-introduction/
-" https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950
+" https://ikenox.info/blog/ideavim-introduction/ 
+" https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
 
 nnoremap <Leader>c :action CommentByLineComment<CR>
 vnoremap <Leader>c :action CommentByLineComment<CR>
@@ -30,6 +30,10 @@ nnoremap ]c :<C-u>action VcsShowNextChangeMarker<CR>
 " 前/次のエラー箇所へジャンプ
 nnoremap [e :<C-u>action GotoPreviousError<CR>
 nnoremap ]e :<C-u>action GotoNextError<CR>
+
+" 前回の変更箇所へジャンプ
+nnoremap g; :<C-u>action JumpToLastChange<CR>
+nnoremap g, :<C-u>action JumpToNextChange<CR>
 
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gs :action GotoSuperMethod<CR>
