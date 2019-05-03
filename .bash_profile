@@ -1,4 +1,3 @@
-# terminal.app用？
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias vi='vim'
 alias l='ls'
@@ -6,11 +5,7 @@ alias ls='ls -G'
 alias ll='ls -hl'
 alias la="ls -a"
 alias grep='grep --color=auto'
-alias prolog='swipl'
 alias f="open ."
-alias g++='g++ --std=c++11'
-alias gitpushall="git add . && git commit -m 'update' && git push"
-alias cd_icloud="cd ~/Library/Mobile\ Documents/3L68KQB4HG~com~readdle~CommonDocuments/Documents"
 # eval "$(rbenv init -)"
 # stack, haskell
 # eval "$(stack --bash-completion-script stack)"
@@ -25,17 +20,12 @@ source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
 # PATH
-export NODE_PATH=/usr/local/lib/node_modules/npm/bin
 export GOPATH=$HOME/.go
 paths=(
-/usr/local/opt/llvm/bin
-/usr/local/Cellar/node/11.3.0_1/bin
 $GOPATH/bin
-$HOME/programming/Storage/go2aws/bin
 $HOME/.local/bin
 $HOME/.cargo/bin
-$HOME/work/LCM/pgsolver/bin
-/Library/TeX/texbin
+$HOME/.npm-global/bin
 )
 for X in ${paths[@]}; do
   PATH=$PATH:$X
@@ -49,7 +39,6 @@ function prompt_command(){
   echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
 }
 PROMPT_COMMAND='prompt_command'
-# PS1="\[\033[31m\]\u\[\033[0m\]\[\033[32m\] \W\[\033[0m\] 卍 "
 # Look at https://github.com/justjanne/powerline-go#customization
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
