@@ -16,6 +16,11 @@ nnoremap s <C-w>
 " https://ikenox.info/blog/ideavim-introduction/ 
 " https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
 
+" error description
+nnoremap <Leader>e :action ShowErrorDescription<CR>
+vnoremap <Leader>e :action ShowErrorDescription<CR>
+
+" コメントアウト
 nnoremap <Leader>c :action CommentByLineComment<CR>
 vnoremap <Leader>c :action CommentByLineComment<CR>
 
