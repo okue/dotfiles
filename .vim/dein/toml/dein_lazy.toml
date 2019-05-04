@@ -7,6 +7,7 @@ repo = 'elmcast/elm-vim'
 on_ft = ['elm']
 hook_add = '''
 let g:elm_setup_keybindings = 0
+let g:elm_format_fail_silently = 1
 '''
 
 [[plugins]]
