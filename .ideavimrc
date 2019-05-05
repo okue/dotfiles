@@ -12,10 +12,6 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap s <C-w>
 
-" 参考
-" https://ikenox.info/blog/ideavim-introduction/ 
-" https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
-
 " error description
 nnoremap <Leader>e :action ShowErrorDescription<CR>
 vnoremap <Leader>e :action ShowErrorDescription<CR>
@@ -51,10 +47,18 @@ nnoremap S :action SearchEverywhere<CR>
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
 
-" MEMO: from https://tikasan.hatenablog.com/entry/2018/07/30/110000
+" 参考
+" https://ikenox.info/blog/ideavim-introduction/ 
+" https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
+
+" MEMO: from https://tikasan.hatenablog.com/entry/2018/07/30/110000 
 " Cmd+E: 直近のファイル一覧
 " Cmd+1: ナビゲーションバーの表示; 矢印とEnterで移動と開くができる
 " Cmd+'+', '-': Fold/Unfold code lines
-"
+
 " TIPS:
-" ctrl+j, k を up, down にマッピングすると便利
+" ctrl+j, k を Up, Down にマッピングすると便利
+
+" XXX:
+" Run   -> Opt+R
+" Debug -> Opt+D
