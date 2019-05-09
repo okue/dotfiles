@@ -6,6 +6,7 @@ alias ll='ls -hl'
 alias la="ls -a"
 alias grep='grep --color=auto'
 alias f="open ."
+alias sqlite3="sqlite3 -header -column"
 # eval "$(rbenv init -)"
 # stack, haskell
 # eval "$(stack --bash-completion-script stack)"
