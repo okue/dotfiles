@@ -1,5 +1,6 @@
 .vim/bundle
 .vim/.vim
+.vim/view/
 .netrwhist
 .vim/dein/repos/github.com
 .vim/dein/.cache

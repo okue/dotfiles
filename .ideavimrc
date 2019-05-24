@@ -20,6 +20,9 @@ vnoremap <Leader>e :action ShowErrorDescription<CR>
 nnoremap <Leader>c :action CommentByLineComment<CR>
 vnoremap <Leader>c :action CommentByLineComment<CR>
 
+nnoremap <Leader>b :action CommentByBlockComment<CR>
+vnoremap <Leader>b :action CommentByBlockComment<CR>
+
 " 前/次のメソッド定義へジャンプ
 nnoremap [m :<C-u>action MethodUp<CR>
 nnoremap ]m :<C-u>action MethodDown<CR>
