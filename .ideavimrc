@@ -45,7 +45,6 @@ nnoremap gi :action GotoImplementation<CR>
 
 nnoremap U :action FindUsages<CR>
 nnoremap R :action RenameElement<CR>
-nnoremap S :action SearchEverywhere<CR>
 
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
