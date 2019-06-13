@@ -62,5 +62,10 @@ vnoremap == :action ReformatCode<CR>
 " XXX:
 " Run   -> Opt+R
 " Debug -> Opt+D
+"
 " Up    -> Ctrl+J
 " Down  -> Ctrl+K
+"
+" Settings for Code Complete
+" Choose Lookup Item -> Tab
+" Choose Lookup Item Replace -> Enter
