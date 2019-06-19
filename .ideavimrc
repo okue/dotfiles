@@ -6,6 +6,11 @@ set wrapscan         " 最後尾まで検索を終えたら次の検索で先頭
 set gdefault         " 置換の時 g オプションをデフォルトで有効にする
 set clipboard=unnamed,unnamedplus,autoselect     " OSのクリップボードをレジスタ指定無しで Yank, Put 出来るようにする
 
+" Emulated Vim Plugins -------------------------------------
+" https://github.com/JetBrains/ideavim
+
+set surround
+
 " key bindings ---------------------------------------------
 nnoremap ; :
 nnoremap <Tab> gt
