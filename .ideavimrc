@@ -10,6 +10,7 @@ set clipboard=unnamed,unnamedplus,autoselect     " OSのクリップボードを
 " https://github.com/JetBrains/ideavim
 
 set surround
+set multiple-cursors
 
 " key bindings ---------------------------------------------
 nnoremap ; :
