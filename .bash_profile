@@ -56,3 +56,6 @@ fi
 HISTSIZE=10000
 PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -u histappend
+
+# java path
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
