@@ -45,7 +45,6 @@ function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
                                     -mode flame\
                                     -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root,vgo"\
-                                    -modules-right "time"\
                                     -theme "solarized-dark16"\
                                     -error $?)"
 }
