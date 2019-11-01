@@ -76,3 +76,6 @@ vnoremap == :action ReformatCode<CR>
 " Settings for Code Complete
 " Choose Lookup Item -> Tab
 " Choose Lookup Item Replace -> Enter
+"
+" Vim Emulation Setting
+" Ctrl+T: use IDE command (refactor this)
