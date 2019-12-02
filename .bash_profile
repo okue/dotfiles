@@ -58,3 +58,4 @@ shopt -u histappend
 
 # java path
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export _JAVA_OPTIONS="-Duser.language=en"
