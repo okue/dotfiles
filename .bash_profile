@@ -58,3 +58,8 @@ shopt -u histappend
 
 # java path
 export JAVA_HOME=`/usr/libexec/java_home -v 11`
+alias javaHome="change_java_home"
+function change_java_home() {
+    echo `/usr/libexec/java_home -v $1`
+    JAVA_HOME=`/usr/libexec/java_home -v $1`
+}
