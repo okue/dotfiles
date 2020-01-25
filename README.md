@@ -10,11 +10,3 @@ Perhaps, you should
 
 - `pip3 install neovim`
 - `brew install git`
-
-
-linters:
-
-- pyls
-- hlint
-- hie
-- solargraph
