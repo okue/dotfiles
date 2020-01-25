@@ -44,8 +44,9 @@ PROMPT_COMMAND='prompt_command'
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
                                     -mode flame\
-                                    -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root,vgo"\
+                                    -modules "shell-var,venv,user,ssh,cwd,perms,git,hg,jobs,exit,root,vgo"\
                                     -theme "solarized-dark16"\
+                                    -shell-var "_JAVA_VERSION_AND_ICON"\
                                     -error $?)"
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
@@ -57,9 +58,13 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -u histappend
 
 # java path
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+export JAVA_VERSION=12
+export _JAVA_VERSION_AND_ICON="jdk-$JAVA_VERSION "
+export JAVA_HOME=`/usr/libexec/java_home -v $JAVA_VERSION`
 alias javaHome="change_java_home"
 function change_java_home() {
-    echo `/usr/libexec/java_home -v $1`
-    JAVA_HOME=`/usr/libexec/java_home -v $1`
+    JAVA_VERSION=$1
+    _JAVA_VERSION_AND_ICON="jdk-$JAVA_VERSION "
+    JAVA_HOME=`/usr/libexec/java_home -v $JAVA_VERSION`
+    echo $JAVA_HOME
 }
