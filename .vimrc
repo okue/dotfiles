@@ -44,10 +44,7 @@ set wildmenu wildmode=list:longest,full          " コマンドラインモー�
 
 " file type ------------------------------------------------
 au BufNewFile,BufRead *.elm   setf elm
-au BufNewFile,BufRead *.scala setf scala
-au BufNewFile,BufRead *.fr    setf frege
 au BufNewFile,BufRead *.z3    setf z3
-au BufNewFile,BufRead *.gd    setf GD
 au BufNewFile,BufRead *.ts    setf typescript
 au BufNewFile,BufRead *.kt    setf kotlin
 au BufNewFile,BufRead *.sol   setf solidity
@@ -55,12 +52,6 @@ au BufNewFile,BufRead *.rs    setf rust
 au BufNewFile,BufRead *.tex   setf tex
 
 " build関連 ------------------------------------------------
-autocmd FileType haskell    map <F4> :w \|!stack runghc %<CR>
-autocmd FileType haskell    map <F5> :w \|!hlint %<CR>
-autocmd FileType ocaml      map <F4> :w \|!ocaml %<CR>
-autocmd FileType ocaml      map <F5> :!ocamlc -i %<CR>
-autocmd FileType rust       map <F4> :w \|!rustc -o a.out %<CR>
-autocmd FileType rust       map <F5> :! ./a.out<CR>
 autocmd FileType ruby       map <F4> :w \|!ruby %<CR>
 autocmd FileType go         map <F4> :w \|!go run %<CR>
 autocmd FileType cpp        map <F4> :w \|!g++-7 --std=c++17 %<CR>
@@ -69,13 +60,10 @@ autocmd FileType c          map <F4> :w \|!gcc-7 %<CR>
 autocmd FileType c          map <F5> :!./a.out <CR>
 autocmd FileType python     map <F4> :w \|!python3.6 %<CR>
 autocmd FileType tex        map <F4> :w \| :!texc %<CR>
-autocmd FileType scala      map <F4> :w \| :!scala %<CR>
 autocmd FileType erlang     map <F4> :w \| :!escript %<CR>
 autocmd FileType erlang     map <F5> :w \| :!dialyzer %<CR>
 autocmd FileType z3         map <F4> :w \| :!z3 %<CR>
 autocmd FileType z3         set syntax=lisp
-autocmd FileType GD         set syntax=haskell
-autocmd FileType frege      set syntax=haskell
 autocmd FileType sh         map <F4> :w \| :!./%<CR>
 autocmd FileType typescript map <F4> :w \| :!tsc %<CR>
 autocmd FileType javascript map <F4> :w \| :!node %<CR>
