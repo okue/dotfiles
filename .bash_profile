@@ -68,6 +68,6 @@ function change_java_home() {
         return
     fi
     _JAVA_VERSION=$1
-    _JAVA_VERSION_AND_ICON="jdk-$_JAVA_VERSION "
+    _JAVA_VERSION_AND_ICON="jdk-$_JAVA_VERSION \ue738"
     JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
 }
