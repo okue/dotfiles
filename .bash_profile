@@ -35,11 +35,11 @@ export PATH=$PATH
 # .bashrc
 [ -f ~/.bashrc ] && . ~/.bashrc
 # PROMPT_COMMAND
-function prompt_command(){
+function _prompt_command(){
   local TEMP_PWD=`basename $PWD`
   echo -ne "\033]0;${TEMP_PWD/#$HOME/~}\007"
 }
-PROMPT_COMMAND='prompt_command'
+PROMPT_COMMAND='_prompt_command'
 # Look at https://github.com/justjanne/powerline-go#customization
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
@@ -54,7 +54,7 @@ if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
 fi
 # bash history
 HISTSIZE=10000
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+PROMPT_COMMAND="$PROMPT_COMMAND; history -a; history -c; history -r;"
 shopt -u histappend
 
 # java path
