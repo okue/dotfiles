@@ -10,3 +10,7 @@ Perhaps, you should
 
 - `pip3 install neovim`
 - `brew install git`
+
+powerline-go:
+
+`go get -u github.com/okue/powerline-go`
