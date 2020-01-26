@@ -58,7 +58,7 @@ PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 shopt -u histappend
 
 # java path
-export JAVA_VERSION=12
+export JAVA_VERSION=11
 export _JAVA_VERSION_AND_ICON="jdk-$JAVA_VERSION "
 export JAVA_HOME=`/usr/libexec/java_home -v $JAVA_VERSION`
 alias javaHome="change_java_home"
