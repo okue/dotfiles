@@ -63,11 +63,18 @@ export _JAVA_VERSION_AND_ICON=$'\ue738'" ${_JAVA_VERSION}"
 export JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
 alias javaHome="change_java_home"
 function change_java_home() {
-    /usr/libexec/java_home -v $1
+    ARG_1="$1"
+    if [ $ARG_1 == "1" ]; then
+        ARG_1="1.8"
+    fi
+    if [ $ARG_1 == "8" ]; then
+        ARG_1="1.8"
+    fi
+    /usr/libexec/java_home -v $ARG_1
     if [ $? -gt 0 ]; then
         return
     fi
-    _JAVA_VERSION=$1
+    _JAVA_VERSION=$ARG_1
     _JAVA_VERSION_AND_ICON=$'\ue738'" ${_JAVA_VERSION}"
     JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
 }
