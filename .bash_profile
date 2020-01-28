@@ -64,10 +64,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
 alias javaHome="change_java_home"
 function change_java_home() {
     local ARG_1="$1"
-    if [ $ARG_1 == "1" ]; then
-        ARG_1="1.8"
-    fi
-    if [ $ARG_1 == "8" ]; then
+    if [ $ARG_1 == "1" ] || [ $ARG_1 == "8" ]; then
         ARG_1="1.8"
     fi
     /usr/libexec/java_home -v $ARG_1
