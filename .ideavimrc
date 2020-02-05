@@ -56,7 +56,7 @@ nnoremap R :action RenameElement<CR>
 nnoremap == :action ReformatCode<CR>
 vnoremap == :action ReformatCode<CR>
 
-" 参考
+" Ref:
 " https://ikenox.info/blog/ideavim-introduction 
 " https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
 " https://tikasan.hatenablog.com/entry/2018/07/30/110000 
@@ -69,5 +69,10 @@ vnoremap == :action ReformatCode<CR>
 " Settings for Code Complete > Choose Lookup Item -> Tab
 " Settings for Code Complete > Choose Lookup Item Replace -> Enter
 "
-" Vim Emulation Setting
+" Vim Emulation Setting:
 " Ctrl+T: use IDE command (refactor this)
+" Ctrl+G: use IDE command (Add Selection for Next Occurrence)
+"
+" Tips:
+" Cmd+], Cmd+[ are equal to JumpToNextChange, JumpToLastChange
+
