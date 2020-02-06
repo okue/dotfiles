@@ -88,3 +88,13 @@ function gradle() {
     fi
 }
 
+function gcd() {
+    local gdir=$(git rev-parse --show-cdup)
+    local tmp=$(git ls-files -- ${gdir} | egrep 'README|build.gradle' | perl -pe's!/[^/]*\$!\n!' | sort | peco)
+    local selected_dir=`dirname ${tmp}`
+    if [ -n "$selected_dir" ]
+    then
+        cd "${selected_dir}"
+    fi
+}
+
