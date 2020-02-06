@@ -61,8 +61,7 @@ shopt -u histappend
 export _JAVA_VERSION=11
 export _JAVA_VERSION_AND_ICON=$'\ue738'" ${_JAVA_VERSION}"
 export JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
-alias javaHome="change_java_home"
-function change_java_home() {
+function javaHome() {
     local ARG_1="$1"
     if [ $ARG_1 == "1" ] || [ $ARG_1 == "8" ]; then
         ARG_1="1.8"
@@ -75,3 +74,17 @@ function change_java_home() {
     _JAVA_VERSION_AND_ICON=$'\ue738'" ${_JAVA_VERSION}"
     JAVA_HOME=`/usr/libexec/java_home -v $_JAVA_VERSION`
 }
+
+# gradle
+function gradle() {
+    GITDIR=`git rev-parse --show-cdup 2> /dev/null`
+    if [ -e "$GITDIR./gradlew" ]
+    then
+        echo Using $GITDIR./gradlew
+        $GITDIR./gradlew "$@"
+    else
+        echo Using $(/usr/bin/which gradle)
+        $(/usr/bin/which gradle) "$@"
+    fi
+}
+
