@@ -44,7 +44,7 @@ PROMPT_COMMAND='_prompt_command'
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
                                     -mode flame\
-                                    -modules "shell-var,venv,user,ssh,cwd,perms,git,hg,jobs,exit,root,vgo"\
+                                    -modules "shell-var,venv,user,ssh,cwd,perms,git,jobs,exit,root"\
                                     -theme "solarized-dark16"\
                                     -shell-var "_JAVA_VERSION_AND_ICON"\
                                     -error $?)"
