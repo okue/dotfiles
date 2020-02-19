@@ -20,6 +20,7 @@ source ~/.bash-completion-files/.haskyapi.bash
 source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
+source ~/.bash-completion-files/.gradle.bash
 # PATH
 export GOPATH=$HOME/.go
 paths=(
