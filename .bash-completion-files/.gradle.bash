@@ -1,6 +1,6 @@
 _gradle()
 {
-    local tasks="clean build assemble generateProto bootJar bootRun detekt ktlintFormat"
+    local tasks="clean build test assemble generateProto bootJar bootRun detekt ktlintFormat"
     local options="-p --info --debug"
     local cur=${COMP_WORDS[COMP_CWORD]}
     local prev=${COMP_WORDS[COMP_CWORD-1]} # previous argument
