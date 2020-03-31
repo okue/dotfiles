@@ -61,7 +61,7 @@ vnoremap == :action ReformatCode<CR>
 " https://qiita.com/sei40kr/items/09e7e92eb7686f9b5950 
 " https://tikasan.hatenablog.com/entry/2018/07/30/110000 
 
-" XXX:
+" Should Do:
 " Run   -> Opt+R
 " Debug -> Opt+D
 " Up    -> Ctrl+K
@@ -75,4 +75,5 @@ vnoremap == :action ReformatCode<CR>
 "
 " Tips:
 " Cmd+], Cmd+[ are equal to JumpToNextChange, JumpToLastChange
+" S" (with string selected in visual mode): Double-quotes it
 
