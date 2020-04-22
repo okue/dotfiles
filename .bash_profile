@@ -99,3 +99,10 @@ function gcd() {
     fi
 }
 
+function pecovim() {
+    if [ "$1" == "" ]; then
+        echo "filename argument required!"
+        return
+    fi
+    vi `find . -name "$1" | peco`
+}
