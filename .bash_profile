@@ -5,6 +5,7 @@ alias ls='ls -G'
 alias ll='ls -hl'
 alias la="ls -a"
 alias grep='grep --color=auto'
+alias curl='curl -s'
 alias f="open ."
 alias sqlite3="sqlite3 -header -column"
 # eval "$(rbenv init -)"
@@ -21,6 +22,12 @@ source ~/.bash-completion-files/.truffle.bash
 source ~/.bash-completion-files/.sbt-scala.bash
 source ~/.bash-completion-files/.rebar3.bash
 source ~/.bash-completion-files/.gradle.bash
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # PATH
 export GOPATH=$HOME/.go
 paths=(
@@ -28,6 +35,7 @@ $GOPATH/bin
 $HOME/.local/bin
 $HOME/.cargo/bin
 $HOME/.npm-global/bin
+./node_modules/.bin
 )
 for X in ${paths[@]}; do
   PATH=$PATH:$X
