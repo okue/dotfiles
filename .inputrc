@@ -10,7 +10,6 @@ $if bash
 
   # `\e` means escape.
   set keymap vi-command
-  "gg": "0"
   "\ev": edit-and-execute-command
   "\C-k": history-search-backward
   "\C-j": history-search-forward
