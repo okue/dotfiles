@@ -21,7 +21,7 @@ let g:NERDTreeShowHidden=1
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 hook_add = '''
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
