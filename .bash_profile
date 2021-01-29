@@ -1,4 +1,5 @@
 export LSCOLORS=gxfxcxdxbxegedabagacad
+export EDITOR=vim
 alias vi='vim'
 alias l='ls'
 alias ls='ls -G'
