@@ -115,3 +115,6 @@ function pecovim() {
     fi
     vi `find . -name "$1" | peco`
 }
+
+# https://github.com/direnv/direnv/blob/master/docs/hook.md
+eval "$(direnv hook bash)"
