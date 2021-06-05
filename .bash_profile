@@ -54,10 +54,10 @@ PROMPT_COMMAND='_prompt_command'
 function _update_ps1() {
     PS1="$($GOPATH/bin/powerline-go -cwd-mode plain\
                                     -mode flame\
-                                    -modules "shell-var,venv,user,ssh,cwd,perms,git,jobs,exit,root"\
+                                    -modules "kube,shell-var,venv,user,ssh,cwd,perms,git,jobs,exit,root"\
                                     -theme "solarized-dark16"\
                                     -shell-var "_JAVA_VERSION_AND_ICON"\
-                                    -error $?)"
+                                    -error $?) "
 }
 if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
